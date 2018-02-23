@@ -1,0 +1,44 @@
+    _____                              ___   ____  
+   |_   _| _ __   __ _    ___   ___   |_ _| |  _ \ 
+     | |  | '__| / _` |  / __| / _ \   | |  | |_) |
+     | |  | |   | (_| | | (__ |  __/   | |  |  __/ 
+     |_|  |_|    \__,_|  \___| \___|  |___| |_|    v. 4.0
+
+Ce script a été initialement réalisé par Renard Rouge et adapté par Matthieu
+(http://www.php-astux.info/traceip-anti-aspirateur-site-web.php)
+Aide installation : https://www.mlxcorp.net/forum/index.php
+
+
+1. Configuration générale
+-------------------------
+	Ouvrez le fichier "trace_ip.php" et dans les premières lignes, renseignez :
+	- les infos d'accès à botre base de données
+	- le login et le mot de passe pour administrer le script
+
+
+2. Base de données
+-------------------
+	Ouvrez PHPMyAdmin ou tout utilitaire de configuration de votre base de données.
+	Cliquez sur l'onglet "SQL" puis collez-y le contenu du fichier trace_ip.sql
+	Cliquez sur "Exécuter".
+
+
+3. Installation sur le site
+---------------------------
+	Mettez cette ligne au tout début de chacune de vos pages PHP dans votre site :
+	(pensez à adapter le dossier en chemin relatif si nécessaire)
+	require('trace_ip.php');
+
+	Attention à l'URL relative, dans cet exemple le fichier est dans un sous-dossier nommé "lib".
+	Plus d'infos sur les URL relatives : http://www.php-astux.info/chemins-relatif-absolu.php
+
+
+4. Enjoy !
+----------
+
+	L'installation est finie, il ne vous reste qu'à espérer que ce script n'aie pas besoin de sévir ...
+	Vous pouvez vous rendre dans l'administration pour consulter les IP et en débannir.
+	(par défaut http://votresite.tld/trace_ip.php?act=admin)
+
+Matthieu
+
